@@ -4,9 +4,10 @@ const http = require('http');
 const bodyParser = require('body-parser');
 
 const app = express();
+app.use(express.static( path.join( __dirname ,'dist' ) ));
 
 app.get('/index.html',function(req,res){
-	res.send('This is a nodejs page')
+	res.sendFIle( path.join(__dirname,'dist/index.html') );
 });
 
 const server = http.createServer(app);
