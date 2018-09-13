@@ -16,10 +16,14 @@ export class TasksComponent implements OnInit {
   };
 
   constructor() {
-  	this.taskArray.push( this.task );
+  	this.pushTask(this.task);
   }
 
   ngOnInit() {
+  }
+
+  pushTask(newTask){
+    this.taskArray.push(newTask);    
   }
 
 }
