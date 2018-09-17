@@ -9,14 +9,10 @@ import { Task } from '../task';
 export class TasksComponent implements OnInit {
   
   taskArray = new Array();
-  task : Task = {
-  		id : 1, 
-  		title : 'Learn MEAN stack',
-  		status : 0
-  };
+  
 
   constructor() {
-  	this.pushTask(this.task);
+  	
   }
 
   ngOnInit() {
